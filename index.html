@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Le Mystère du Champignon d'Or</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le Mystère du Champignon d'Or</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(ellipse at top left, rgba(255,255,255,0.08), transparent),
+                  radial-gradient(ellipse at bottom right, rgba(255,255,255,0.05), transparent);
+      z-index: 0;
+      animation: float 12s infinite linear;
+    }
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-20px); }
+    }
+  </style>
 </head>
 <body>
-    <audio id="bg-music" loop autoplay>
-        <source src="https://ia801703.us.archive.org/6/items/guifrog-beyond-the-warriors/Guifrog-BeyondTheWarriors.mp3" type="audio/mpeg">
-        Ton navigateur ne supporte pas la musique en fond.
-    </audio>
-
+    <body>
+  <audio id="bg-music" autoplay loop>
+    <source src="https://ia801703.us.archive.org/6/items/guifrog-beyond-the-warriors/Guifrog-BeyondTheWarriors.mp3" type="audio/mpeg" />
+    Ton navigateur ne supporte pas la musique de fond.
+  </audio>
     <div class="container">
-        <h1>Le Mystère du Champignon d'Or</h1>
-        <div id="timer">30:00</div>
-        <div id="questions-container"></div>
-        <div id="final-code" class="hidden">
-            🎉 Bravo ! Voici ton code secret : <strong>748</strong><br><br>
-            <button onclick="resetGame()">🔁 Recommencer</button>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+    <h1>Le Mystère du Champignon d'Or</h1>
+    <p><em>Bienvenue, jeune voyageur. Le Royaume des champignons t'attend...
+    Réponds aux  énigmes une à une pour débloquer le portail.</em></p>
+    <div id="timer">30:00</div>
+    <div id="counter">Runes trouvées : 0 / 8</div>
+    <div id="questions-container"></div>
+    <div id="final-code" class="hidden">
+      <strong>
