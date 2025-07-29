@@ -58,4 +58,13 @@
     }
   </script>
 </body>
+  <script>
+  document.addEventListener("click", function playMusicOnce() {
+    const music = document.getElementById("bg-music");
+    if (music && music.paused) {
+      music.play().catch(() => {});
+    }
+    document.removeEventListener("click", playMusicOnce);
+  });
+</script>
 </html>
