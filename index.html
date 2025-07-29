@@ -104,6 +104,13 @@
       }
     }
   </script>
+  <script>
+  function playMusic() {
+    const music = document.getElementById("bg-music");
+    music.play();
+    document.getElementById("music-control").style.display = "none";
+  }
+</script>
 </body>
   <div id="music-control">
   <button onclick="playMusic()">🎵 Activer la musique</button>
