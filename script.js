@@ -1,4 +1,3 @@
-Voici le code corrigé :
 
 ```javascript
 const questions = [
