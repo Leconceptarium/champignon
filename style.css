@@ -67,8 +67,20 @@ button {
   font-family: inherit;
   font-size: 1rem;
 }
+#music-control {
+  text-align: center;
+  margin-top: 15px;
+}
 
-button:hover {
+#music-control button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: #ffc107;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}button:hover {
   background-color: var(--primary-shadow);
 }
 
