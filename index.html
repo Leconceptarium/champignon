@@ -60,9 +60,28 @@
     .firefly:nth-child(8) { top: 40%; left: 30%; animation-delay: 2.5s; }
     .firefly:nth-child(9) { top: 25%; left: 60%; animation-delay: 3.5s; }
     .firefly:nth-child(10) { top: 90%; left: 15%; animation-delay: 1.5s; }
+
+    #music-control {
+      text-align: center;
+      margin: 20px 0;
+      z-index: 2;
+      position: relative;
+    }
+
+    #music-control button {
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      background-color: #ffc107;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Lucioles -->
   <div class="fireflies">
     <div class="firefly"></div>
     <div class="firefly"></div>
@@ -76,11 +95,17 @@
     <div class="firefly"></div>
   </div>
 
-  <audio id="bg-music" loop autoplay>
+  <!-- Bouton Musique -->
+  <div id="music-control">
+    <button onclick="playMusic()">🎵 Activer la musique</button>
+  </div>
+
+  <!-- Audio -->
+  <audio id="bg-music" loop>
     <source src="https://ia801703.us.archive.org/6/items/guifrog-beyond-the-warriors/Guifrog-BeyondTheWarriors.mp3" type="audio/mpeg" />
-    Ton navigateur ne supporte pas la musique.
   </audio>
 
+  <!-- Contenu principal -->
   <div class="container">
     <h1>Le Mystère du Champignon d'Or</h1>
     <p><em>Bienvenue, jeune voyageur. Le Royaume des champignons t'attend...<br>
@@ -98,24 +123,11 @@
 
   <script src="script.js"></script>
   <script>
-    function openFullscreen() {
-      if (document.documentElement.requestFullscreen) {
-        document.documentElement.requestFullscreen();
-      }
+    function playMusic() {
+      const music = document.getElementById("bg-music");
+      music.play();
+      document.getElementById("music-control").style.display = "none";
     }
   </script>
-  <script>
-  function playMusic() {
-    const music = document.getElementById("bg-music");
-    music.play();
-    document.getElementById("music-control").style.display = "none";
-  }
-</script>
 </body>
-  <div id="music-control">
-  <button onclick="playMusic()">🎵 Activer la musique</button>
-</div>
-<audio id="bg-music" loop>
-  <source src="https://ia801703.us.archive.org/6/items/guifrog-beyond-the-warriors/Guifrog-BeyondTheWarriors.mp3" type="audio/mpeg" />
-</audio>
 </html>
