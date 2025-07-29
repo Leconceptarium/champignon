@@ -1,12 +1,12 @@
 const questions = [
     { id: 1, text: "Combien y a-t-il de fenêtres sur la façade avant de la chapelle ?", answer: "7" },
-    { id: 2, text: "Quel est le code magique si tu ajoutes 2h30 et 2h00 ?", answer: "9" },
+    { id: 2, text: "La vierge cache un code ", answer: "PPK6" },
     { id: 3, text: "Je suis là quand tu veux t’asseoir et rêver un peu. Que suis-je ?", answer: "banc" },
     { id: 4, text: "Je coule sans jamais m’arrêter et traverse la sortie de la forêt. Que suis-je ?", answer: "rivière" },
-    { id: 5, text: "Quelle est la couleur du champignon d’or ?", answer: "jaune" },
+    { id: 5, text: "Quelle est la couleur du champignon d’or ?", answer: "or" },
     { id: 6, text: "Quel est le prénom du champignon gardien ?", answer: "champillou" },
     { id: 7, text: "Combien de runes faut-il trouver pour ouvrir la boîte ?", answer: "8" },
-    { id: 8, text: "Additionne les temps pour Ventron Centre et Cornimont Voie Verte. Quel chiffre obtiens-tu (somme des chiffres) ?", answer: "8" }
+    { id: 8, text: "Additionne les temps pour Ventron Centre et Cornimont Voie Verte. Quel chiffre obtiens-tu (somme des chiffres) ?", answer: "2h05" }
 ];
 
 let correctAnswers = 0;
