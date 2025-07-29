@@ -1,74 +1,120 @@
+:root {
+  --primary-color: #ffc107;
+  --primary-shadow: #ffd700;
+  --background-start: #1a1a2e;
+  --background-end: #3c3c5c;
+  --text-color: green;
+  --block-bg: rgba(255, 255, 255, 0.1);
+  --input-bg: rgba(255, 255, 255, 0.8);
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Trebuchet MS', sans-serif;
-    color: green;
-    background: linear-gradient(to bottom, #1a1a2e, #3c3c5c);
-    background-image: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 70%), 
-                      radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
-    min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: var(--text-color);
+  background: linear-gradient(to bottom, var(--background-start), var(--background-end)),
+              radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
+              radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container {
-    max-width: 700px;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
+  max-width: 700px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
 }
 
 .question-block {
-    background: rgba(255, 255, 255, 0.1);
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(255,255,255,0.1);
-    transition: background 0.3s ease;
+  background: var(--block-bg);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.question-block:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 input {
-    padding: 10px;
-    width: 60%;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
+  padding: 12px;
+  width: 60%;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  background-color: var(--input-bg);
+  font-family: inherit;
+  font-size: 1rem;
 }
 
 button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #ffc107;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background-color: var(--primary-color);
+  color: #1a1a2e;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #ffd700;
 }
 
 #timer {
-    font-size: 1.8rem;
-    margin: 15px 0;
-    color: #ffc107;
+  font-size: 2rem;
+  margin: 20px 0;
+  color: var(--primary-color);
+  font-weight: bold;
 }
 
 #final-code {
-    background-color: rgba(0,0,0,0.3);
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 12px;
-    font-size: 1.3rem;
-    animation: pulse 1.5s infinite;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 25px;
+  margin-top: 25px;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  animation: pulse 1.5s infinite;
+  border: 1px solid rgba(255, 215, 0, 0.3);
 }
 
 @keyframes pulse {
-    0% { box-shadow: 0 0 5px #ffd700; }
-    50% { box-shadow: 0 0 20px #ffd700; }
-    100% { box-shadow: 0 0 5px #ffd700; }
+  0% {
+    box-shadow: 0 0 5px var(--primary-shadow);
+  }
+  50% {
+    box-shadow: 0 0 25px var(--primary-shadow);
+  }
+  100% {
+    box-shadow: 0 0 5px var(--primary-shadow);
+  }
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 600px) {
-    input {
-        width: 90%;
-    }
+  .container {
+    padding: 15px;
+  }
+
+  input, button {
+    width: 90%;
+  }
+
+  #timer {
+    font-size: 1.5rem;
+  }
 }
