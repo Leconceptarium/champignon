@@ -18,6 +18,7 @@
       z-index: 0;
       animation: float 12s infinite linear;
     }
+
     @keyframes float {
       from { transform: translateY(0); }
       to { transform: translateY(-20px); }
@@ -25,17 +26,37 @@
   </style>
 </head>
 <body>
-    <body>
   <audio id="bg-music" autoplay loop>
     <source src="https://ia801703.us.archive.org/6/items/guifrog-beyond-the-warriors/Guifrog-BeyondTheWarriors.mp3" type="audio/mpeg" />
     Ton navigateur ne supporte pas la musique de fond.
   </audio>
-    <div class="container">
+
+  <div class="container">
     <h1>Le Mystère du Champignon d'Or</h1>
-    <p><em>Bienvenue, jeune voyageur. Le Royaume des champignons t'attend...
-    Réponds aux  énigmes une à une pour débloquer le portail.</em></p>
+    <p><em>Bienvenue, jeune voyageur. Le Royaume des champignons t'attend...<br>
+    Réponds aux énigmes une à une pour débloquer le portail magique.</em></p>
+
     <div id="timer">30:00</div>
     <div id="counter">Runes trouvées : 0 / 8</div>
     <div id="questions-container"></div>
+
     <div id="final-code" class="hidden">
-      <strong>
+      <strong>🎉 Bravo ! Voici ton code secret : <span style="font-size:1.5em;">748</span> 🎉</strong><br /><br />
+      <button onclick="resetGame()">🔁 Recommencer</button>
+    </div>
+
+    <button onclick="openFullscreen()" style="margin-top:20px">
+      🔎 Plein écran
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function openFullscreen() {
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+      }
+    }
+  </script>
+</body>
+</html>
