@@ -1,5 +1,3 @@
-
-```javascript
 const questions = [
     { id: 1, text: "Combien y a-t-il de fenêtres sur la façade avant de la chapelle ?", answer: "7" },
     { id: 2, text: "La vierge cache un code", answer: "ppk6" },
@@ -8,7 +6,7 @@ const questions = [
     { id: 5, text: "Quelle est la couleur du champignon d’or ?", answer: "or" },
     { id: 6, text: "Quel est le prénom du champignon gardien ?", answer: "champillou" },
     { id: 7, text: "Combien de runes faut-il trouver pour ouvrir la boîte ?", answer: "8" },
-    { id: 8, text: "Additionne les temps pour Ventron Centre et Cornimont Voie Verte. Quel chiffre obtiens-tu (somme des chiffres) ?", answer: "2h05" }
+    { id: 8, text: "Additionne les temps pour Ventron Centre et Cornimont Voie Verte. Quel chiffre obtiens-tu (somme des chiffres) ?", answer: "11" }
 ];
 
 let correctAnswers = 0;
@@ -58,29 +56,24 @@ function resetGame() {
 
 // Timer 30 minutes
 let time = 1800;
+let timerInterval;
 const timerElement = document.getElementById("timer");
 
 function startTimer() {
-    const timer = setInterval(() => {
+    timerInterval = setInterval(() => {
         const minutes = Math.floor(time / 60);
         const seconds = time % 60;
         timerElement.innerText = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
         if (time === 0) {
-            clearInterval(timer);
+            clearInterval(timerInterval);
             alert("⏰ Temps écoulé !");
         }
         time--;
     }, 1000);
 }
 
-window.onload = () => {
+// Utilisation de DOMContentLoaded au lieu de window.onload
+document.addEventListener("DOMContentLoaded", () => {
     createQuestions();
     startTimer();
-};
-```
-
-Corrections apportées :
-1. Correction de la réponse à la question 8 : "2h05" a été remplacé par "11" (somme des chiffres de 2h05).
-2. Correction des backticks dans les template literals.
-3. Correction des guillemets dans les attributs HTML.
-4. Ajout de l'appel à `resetGame` pour réinitialiser le jeu.
+});
