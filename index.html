@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,14 +6,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <audio id="bg-music" loop autoplay>
+        <source src="https://ia801703.us.archive.org/6/items/guifrog-beyond-the-warriors/Guifrog-BeyondTheWarriors.mp3" type="audio/mpeg">
+        Ton navigateur ne supporte pas la musique en fond.
+    </audio>
+
     <div class="container">
         <h1>Le Mystère du Champignon d'Or</h1>
         <div id="timer">30:00</div>
         <div id="questions-container"></div>
         <div id="final-code" class="hidden">
-            🎉 Bravo ! Voici ton code secret : <strong>748</strong>
+            🎉 Bravo ! Voici ton code secret : <strong>748</strong><br><br>
+            <button onclick="resetGame()">🔁 Recommencer</button>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
