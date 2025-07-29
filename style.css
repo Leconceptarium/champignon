@@ -3,7 +3,7 @@
   --primary-shadow: #ffd700;
   --background-start: #1a1a2e;
   --background-end: #3c3c5c;
-  --text-color: #dfffe2; /* vert clair magique */
+  --text-color: #dfffe2;
   --block-bg: rgba(255, 255, 255, 0.08);
   --input-bg: rgba(255, 255, 255, 0.85);
 }
@@ -13,9 +13,7 @@ body {
   padding: 0;
   font-family: 'Trebuchet MS', sans-serif;
   color: var(--text-color);
-  background: linear-gradient(to bottom, var(--background-start), var(--background-end)),
-              radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
-              radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  background: linear-gradient(to bottom, var(--background-start), var(--background-end));
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -27,6 +25,8 @@ body {
   width: 100%;
   padding: 20px;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .question-block {
@@ -38,9 +38,9 @@ body {
   transition: all 0.3s ease;
 }
 
-.question-block:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+.question-block.correct {
+  animation: pulse 1s;
+  border: 2px solid var(--primary-color);
 }
 
 input {
@@ -69,7 +69,7 @@ button {
 }
 
 button:hover {
-  background-color: #ffd700;
+  background-color: var(--primary-shadow);
 }
 
 #timer {
@@ -77,6 +77,12 @@ button:hover {
   margin: 20px 0;
   color: var(--primary-color);
   font-weight: bold;
+}
+
+#counter {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #fffbd6;
 }
 
 #final-code {
@@ -91,15 +97,9 @@ button:hover {
 }
 
 @keyframes pulse {
-  0% {
-    box-shadow: 0 0 5px var(--primary-shadow);
-  }
-  50% {
-    box-shadow: 0 0 25px var(--primary-shadow);
-  }
-  100% {
-    box-shadow: 0 0 5px var(--primary-shadow);
-  }
+  0% { box-shadow: 0 0 5px var(--primary-shadow); }
+  50% { box-shadow: 0 0 25px var(--primary-shadow); }
+  100% { box-shadow: 0 0 5px var(--primary-shadow); }
 }
 
 .hidden {
@@ -110,12 +110,10 @@ button:hover {
   .container {
     padding: 15px;
   }
-
   input,
   button {
     width: 90%;
   }
-
   #timer {
     font-size: 1.5rem;
   }
