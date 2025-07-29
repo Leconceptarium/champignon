@@ -1,12 +1,17 @@
 const questions = [
-  { id: 1, text: "Combien y a-t-il de fenêtres sur la façade avant de la chapelle ?", answer: "7" },
-  { id: 2, text: "La vierge cache un code", answer: "ppk6" },
-  { id: 3, text: "Je suis là quand tu veux t’asseoir et rêver un peu. Que suis-je ?", answer: "banc" },
-  { id: 4, text: "Je coule sans jamais m’arrêter et traverse la sortie de la forêt. Que suis-je ?", answer: "rivière" },
-  { id: 5, text: "Quelle est la couleur du champignon d’or ?", answer: "or" },
-  { id: 6, text: "Quel est le prénom du champignon gardien ?", answer: "champillou" },
-  { id: 7, text: "Combien de runes faut-il trouver pour ouvrir la boîte ?", answer: "8" },
-  { id: 8, text: "Additionne les temps pour Ventron Centre et Cornimont Voie Verte. Quel chiffre obtiens-tu (somme des chiffres) ?", answer: "2h05" }
+    { id: 1, text: "Combien y a-t-il de fenêtres sur la façade avant de la chapelle ?", answer: "7" },
+    { id: 2, text: "La vierge cache un code", answer: "ppk6" },
+    { id: 3, text: "Je suis là quand tu veux t’asseoir et rêver un peu. Que suis-je ?", answer: "banc" },
+    { id: 4, text: "Je coule sans jamais m’arrêter et traverse la sortie de la forêt. Que suis-je ?", answer: "rivière" },
+    { id: 5, text: "Quelle est la couleur du champignon d’or ?", answer: "or" },
+    { id: 6, text: "Quel est le prénom du champignon gardien ?", answer: "champillou" },
+    { id: 7, text: "Combien de runes faut-il trouver pour ouvrir la boîte ?", answer: "8" },
+    {
+        id: 8,
+        text: `Additionne les temps pour Ventron Centre et Cornimont Voie Verte. Quel chiffre obtiens-tu (somme des chiffres) ?<br><br>
+        <img src="lampe.jpg" alt="Photo d'indice" style="max-width: 100%; border-radius: 10px; box-shadow: 0 0 10px rgba(255,255,255,0.2);">`,
+        answer: "2h05"
+    }
 ];
 
 let correctAnswers = 0;
