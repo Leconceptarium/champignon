@@ -3,9 +3,9 @@
   --primary-shadow: #ffd700;
   --background-start: #1a1a2e;
   --background-end: #3c3c5c;
-  --text-color: green;
-  --block-bg: rgba(255, 255, 255, 0.1);
-  --input-bg: rgba(255, 255, 255, 0.8);
+  --text-color: #dfffe2; /* vert clair magique */
+  --block-bg: rgba(255, 255, 255, 0.08);
+  --input-bg: rgba(255, 255, 255, 0.85);
 }
 
 body {
@@ -34,13 +34,13 @@ body {
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
 .question-block:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
 input {
@@ -80,13 +80,14 @@ button:hover {
 }
 
 #final-code {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 25px;
   margin-top: 25px;
   border-radius: 12px;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   animation: pulse 1.5s infinite;
-  border: 1px solid rgba(255, 215, 0, 0.3);
+  border: 1px solid rgba(255, 215, 0, 0.5);
+  color: #ffffff;
 }
 
 @keyframes pulse {
@@ -110,7 +111,8 @@ button:hover {
     padding: 15px;
   }
 
-  input, button {
+  input,
+  button {
     width: 90%;
   }
 
