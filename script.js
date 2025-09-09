@@ -5,7 +5,7 @@ const questions = [
     { id: 4, text: "Je coule sans jamais m’arrêter et traverse la sortie de la forêt. Que suis-je ?", answer: "rivière" },
     { id: 5, text: "Quelle est la couleur du champignon d’or ?", answer: "or" },
     { id: 6, text: "Quel est le prénom du champignon gardien ?", answer: "champillou" },
-    { id: 7, text: "Combien de runes faut-il trouver pour ouvrir la boîte ?", answer: "8" },
+    { id: 7, text: "Combien d'énigmes faut-il trouver pour ouvrir la boîte ?", answer: "8" },
     {
         id: 8,
         text: `Additionne les temps pour Ventron Centre et Cornimont Voie Verte. Quel chiffre obtiens-tu (somme des chiffres) ?<br><br>
