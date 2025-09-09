@@ -1,6 +1,6 @@
 const questions = [
     { id: 1, text: "Combien y a-t-il de fenêtres sur la façade avant de la chapelle ?", answer: "7" },
-    { id: 2, text: "La vierge cache un code", answer: "ppk6" },
+    { id: 2, text: "Le coeur de la vierge marie cache un code", answer: "1309" },
     { id: 3, text: "Je suis là quand tu veux t’asseoir et rêver un peu. Que suis-je ?", answer: "banc" },
     { id: 4, text: "Je coule sans jamais m’arrêter et traverse la sortie de la forêt. Que suis-je ?", answer: "rivière" },
     { id: 5, text: "Quelle est la couleur du champignon d’or ?", answer: "or" },
